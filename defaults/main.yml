@@ -1,0 +1,28 @@
+---
+base_packages:
+  - unzip
+  - curl
+  - htop
+  - atop
+  - vim
+  - git
+  - wget
+  - libxml2-utils
+  - screen
+  - mount
+  - tree
+  - libpam-umask
+
+additional_packages: []
+
+install_sendmail: false
+
+install_exim: false
+
+sendmail_packages:
+  - sendmail
+
+exim_packages:
+  - exim4-base
+  - exim4-config
+  - exim4-daemon-light

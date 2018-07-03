@@ -1,0 +1,6 @@
+---
+- include: packages.yml
+- include: sendmail.yml
+  when: install_sendmail
+- include: exim.yml
+  when: install_exim

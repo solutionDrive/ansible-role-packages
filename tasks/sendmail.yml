@@ -1,0 +1,12 @@
+---
+- name: Ensure Package-Manager is up to date
+  package:
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: Install Sendmail-Packages
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ sendmail_packages }}"
+  notify: restart sendmail
