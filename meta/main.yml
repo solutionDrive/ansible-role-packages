@@ -1,4 +1,5 @@
 galaxy_info:
+  role_name: packages
   author: solutionDrive GmbH
   description: Installs a default set of packages
   company: solutionDrive GmbH
