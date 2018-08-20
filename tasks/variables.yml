@@ -7,3 +7,9 @@
       - "{{ ansible_distribution }}.yml"
       skip: true
   tags: vars
+
+- name: check sendmail and exim variables
+  assert:
+    that: install_sendmail != install_exim
+    msg: "Either install sendmail or install exim. Both is not possible!"
+  when: install_sendmail == true or install_exim == true
