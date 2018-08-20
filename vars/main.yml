@@ -3,6 +3,6 @@ sendmail_packages:
   - sendmail
 
 exim_packages:
-  - exim4-base
   - exim4-config
+  - exim4-base
   - exim4-daemon-light
