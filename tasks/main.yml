@@ -1,4 +1,5 @@
 ---
+- inlcude: variables.yml
 - include: packages.yml
 - include: sendmail.yml
   when: install_sendmail
