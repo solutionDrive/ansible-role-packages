@@ -2,7 +2,6 @@
 - hosts: all
 
   vars:
-    install_sendmail: true
     install_exim: true
 
   pre_tasks:
