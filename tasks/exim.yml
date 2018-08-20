@@ -5,3 +5,11 @@
     state: present
   with_items: "{{ exim_packages }}"
   notify: restart exim
+  when: install_exim_default_packages
+
+- name: Install exim additional packages
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ exim_additional_packages }}"
+  notify: restart exim
