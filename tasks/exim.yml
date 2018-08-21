@@ -1,12 +1,15 @@
 ---
-- name: Ensure Package-Manager is up to date
-  package:
-    update_cache: yes
-    cache_valid_time: 3600
-
 - name: Install exim packages
   package:
     name: "{{ item }}"
     state: present
   with_items: "{{ exim_packages }}"
+  notify: restart exim
+  when: install_exim_default_packages
+
+- name: Install exim additional packages
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ exim_additional_packages }}"
   notify: restart exim

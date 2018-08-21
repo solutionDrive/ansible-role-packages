@@ -16,13 +16,9 @@ base_packages:
 additional_packages: []
 
 install_sendmail: false
+install_sendmail_default_packages: true
+sendmail_additional_packages: []
 
 install_exim: false
-
-sendmail_packages:
-  - sendmail
-
-exim_packages:
-  - exim4-base
-  - exim4-config
-  - exim4-daemon-light
+install_exim_default_packages: true
+exim_additional_packages: []
